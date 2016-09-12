@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">"Survey "</string>
+    <string name="yes_button">Yes!</string>
+    <string name="no_button">No!</string>
+    <string name="question_1">Do you like dogs?</string>
+    <string name="question_2">Do you like cats?</string>
+</resources>
