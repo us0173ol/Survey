@@ -2,7 +2,9 @@
     <string name="app_name">"Survey "</string>
     <string name="yes_button">Yes!</string>
     <string name="no_button">No!</string>
-    <string name="results_button"></string>
-    <string name="reset_button"></string>
+    <string name="results_button">Results</string>
+    <string name="reset_button">Reset</string>
     <string name="question_1">Do you like bacon?</string>
+    <string name="results_text">Here are the results</string>
+
 </resources>

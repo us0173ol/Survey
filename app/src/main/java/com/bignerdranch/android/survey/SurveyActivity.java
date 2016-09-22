@@ -1,5 +1,6 @@
 package com.bignerdranch.android.survey;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,7 +12,8 @@ import android.widget.Toast;
 public class SurveyActivity extends AppCompatActivity {
     private static final String TAG = "SurveyActivity";
     private static final String KEY_INDEX = "index";
-//button variables
+    private static final int REQUEST_RESULTS = 0;
+
     private Button mYesButton;
     private Button mNoButton;
     private Button mResultsButton;
@@ -90,8 +92,11 @@ public class SurveyActivity extends AppCompatActivity {
         mResultsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                int results = 0;
                 //show toast of results to survey so far
-                Toast.makeText(SurveyActivity.this, "Yes:"+yes+" No:"+no,Toast.LENGTH_LONG).show();
+                Intent i = ResultsActivity.newIntent(SurveyActivity.this,results );
+                //Toast.makeText(SurveyActivity.this, "Yes:"+yes+" No:"+no,Toast.LENGTH_LONG).show();
+                startActivityForResult(i, REQUEST_RESULTS);
             }
         });
         //what to do when reset button is clicked
